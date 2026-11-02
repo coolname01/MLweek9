@@ -2,13 +2,14 @@
 data/
 models/
 cache/
+archive/
 
 # arrays and tables (keep experiment logs and configs)
 *.npz
 *.csv
 !experiments/**/*.csv
 !configs/**/*.csv
-
+SKAB_Student_*.ipynb
 # roster
 team_info.csv
 
