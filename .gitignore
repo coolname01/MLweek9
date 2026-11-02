@@ -22,3 +22,6 @@ team_info.csv
 *.xz
 *.7z
 *.rar
+
+archive/
+SKAB_Student_*.ipynb
