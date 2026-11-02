@@ -1,0 +1,9 @@
+seed: 42
+signals_dir: data
+tables_dir: archive
+cache_dir: cache
+models_dir: models
+classes: [W, N1, N2, N3, REM]
+channels: ["EEG Fpz-Cz", "EEG Pz-Oz", "EOG horizontal"]
+fs: 100
+epoch_length: 3000

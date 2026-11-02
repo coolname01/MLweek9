@@ -11,14 +11,15 @@ Deadlines (MSK): team roster freeze 2026-11-04 14:00; final Kaggle solutions + M
 - 3 channels (EEG Fpz-Cz, EEG Pz-Oz, EOG horizontal), 100 Hz, 3000 samples, uV.
 - Example record SC4011: 2,802 epochs, long wake before and after sleep.
 - Private leaderboard: 6 subjects; small macro-F1 gaps may be noise.
-- Class distribution: TO COMPUTE.
+- Class distribution (labels.csv): train W 208224, N1 16277, N2 51233, N3 8412, REM 18507; val W 28763, N1 1884, N2 7459, N3 1784, REM 3316.
+- epoch_index gaps (step > 1): 142 gaps, 1104 missing 30 s slots. See docs/data_summary.md.
 
 ## Status
 - [x] Task description and rules collected
-- [ ] Download full_psg_v1, verify SHA-256 (npz counts match 112/16/24; hashes not checked)
+- [x] full_psg_v1 counts match. SHA-256: 161/162 manifest files match; `archive/README.md` (2307 bytes) is absent; `team_info.csv` was not opened
 - [x] Local folders: src, configs, notebooks, experiments, models, cache; .gitignore and .cursorignore
-- [ ] First commit and push (waiting for confirmation)
-- [ ] Data checks and class distribution
+- [x] Data checks and class distribution (`docs/data_summary.md`)
+- [ ] Push (local commit only)
 - [ ] Baseline: Welch PSD band features + amplitude stats + classical classifier, val macro-F1, per-class F1, time
 - [ ] Hypothesis 1: neighboring-epoch context within a record
 - [ ] Final checkpoint + SHA-256, offline Kaggle notebook (<= 2 h)
@@ -32,7 +33,9 @@ See experiments/results.csv (empty).
 - State file: `docs/STATE.md`.
 
 ## Next step
-Data checks (SHA-256, class distribution). Commit only after confirmation.
+Baseline: Welch PSD band features + amplitude stats + a classical classifier. Select on train/val only.
+
+Checks ran on Python 3.14.8 (3.12 is not installed here), numpy 2.5.4, pandas 3.1.0, pyyaml 6.0.3, 58 s.
 
 ## Disclosures
 - AI: Perplexity (planning, prompts, project files); Cursor (code) - describe parts and verification.

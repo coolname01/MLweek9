@@ -2,6 +2,9 @@
 data/
 models/
 cache/
+.venv/
+__pycache__/
+*.py[cod]
 archive/
 
 # arrays and tables (keep experiment logs and configs)
