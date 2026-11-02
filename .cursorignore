@@ -1,0 +1,23 @@
+# local data, weights, feature cache
+data/
+models/
+cache/
+
+# arrays and tables (keep experiment logs and configs)
+*.npz
+*.csv
+!experiments/**/*.csv
+!configs/**/*.csv
+
+# roster
+team_info.csv
+
+# archives
+*.zip
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
