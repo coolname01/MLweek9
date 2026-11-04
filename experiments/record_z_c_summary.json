@@ -1,0 +1,304 @@
+{
+  "formula": "(x - mean_rec) / (population_std_rec + 1e-6)",
+  "eps": 1e-06,
+  "ddof": 0,
+  "scope": "one_record_all_epochs",
+  "gate_macro": 0.769678,
+  "tie_macro": 0.005,
+  "reference_macro": 0.7596783850194796,
+  "reference_subjects": {
+    "SC404": 0.8064217284711441,
+    "SC407": 0.8698662204038328,
+    "SC417": 0.6784642998663066,
+    "SC424": 0.777328784085071,
+    "SC426": 0.7801167644157571,
+    "SC427": 0.7673836408557899,
+    "SC457": 0.5716146792727924,
+    "SC459": 0.6108681501445045
+  },
+  "features_v1_sha256": "93c72908dcb8cba0725be8eeb59dbbd42bd0f69fbfb7324a56ba0e812550a4bc",
+  "features_v1_unchanged": true,
+  "context2_sha256": "ef7125020f85b4fdbdedb5c28f705fe3695b8ca33d3ba688f56576df41b5e4bd",
+  "single_record_api": [
+    "zscore_record_features(features)",
+    "transform_record(features, epoch_index, variant)"
+  ],
+  "smoke": {
+    "records": [
+      {
+        "split": "train",
+        "record_id": "SC4011",
+        "n_epochs": 2802,
+        "c1_shape": [
+          2802,
+          271
+        ],
+        "c2_shape": [
+          2802,
+          541
+        ],
+        "z_nan": 0.0,
+        "z_inf": 0.0,
+        "c1_nan": 0.00042668520903624453,
+        "c1_inf": 0.0,
+        "c2_nan": 0.00042747390628030416,
+        "c2_inf": 0.0,
+        "n_constant": 0,
+        "seconds": 0.00866969999333378
+      },
+      {
+        "split": "train",
+        "record_id": "SC4012",
+        "n_epochs": 2848,
+        "c1_shape": [
+          2848,
+          271
+        ],
+        "c2_shape": [
+          2848,
+          541
+        ],
+        "z_nan": 0.0,
+        "z_inf": 0.0,
+        "c1_nan": 0.0004197935237779344,
+        "c1_inf": 0.0,
+        "c2_nan": 0.0004205694822322374,
+        "c2_inf": 0.0,
+        "n_constant": 0,
+        "seconds": 0.009588400003849529
+      },
+      {
+        "split": "val",
+        "record_id": "SC4041",
+        "n_epochs": 2569,
+        "c1_shape": [
+          2569,
+          271
+        ],
+        "c2_shape": [
+          2569,
+          541
+        ],
+        "z_nan": 0.0,
+        "z_inf": 0.0,
+        "c1_nan": 0.0007756402982480584,
+        "c1_inf": 0.0,
+        "c2_nan": 0.000777074014141308,
+        "c2_inf": 0.0,
+        "n_constant": 0,
+        "seconds": 0.008523299999069422,
+        "gap_epoch": 1365,
+        "gap_sources": [
+          1363,
+          1364,
+          null,
+          1367
+        ],
+        "gap_plus1_is_next_row": false
+      }
+    ],
+    "isolation_max_abs": 1.7638397216796875,
+    "seconds": 0.5958864999993239
+  },
+  "cache_s": 1.4707479999924544,
+  "winner": "c1",
+  "variants": {
+    "c1": {
+      "variant": "c1",
+      "model_id": "record_z_c1",
+      "macro_f1": 0.7744287626769817,
+      "accuracy": 0.8999675970929963,
+      "per_class_f1": [
+        0.9759282069329579,
+        0.4654463952185282,
+        0.8150670355394765,
+        0.7670742618550552,
+        0.8486279138388906
+      ],
+      "n1_precision": 0.3590778097982709,
+      "n1_recall": 0.6613588110403397,
+      "improved": 6,
+      "passed": true,
+      "subjects": {
+        "SC404": {
+          "f1": 0.7903240326475094,
+          "reference": 0.8064217284711441,
+          "delta": -0.01609769582363474,
+          "improved": false
+        },
+        "SC407": {
+          "f1": 0.8738537328397327,
+          "reference": 0.8698662204038328,
+          "delta": 0.003987512435899898,
+          "improved": true
+        },
+        "SC417": {
+          "f1": 0.7264765618761528,
+          "reference": 0.6784642998663066,
+          "delta": 0.04801226200984621,
+          "improved": true
+        },
+        "SC424": {
+          "f1": 0.807147004280899,
+          "reference": 0.777328784085071,
+          "delta": 0.029818220195828027,
+          "improved": true
+        },
+        "SC426": {
+          "f1": 0.7991155211735309,
+          "reference": 0.7801167644157571,
+          "delta": 0.01899875675777385,
+          "improved": true
+        },
+        "SC427": {
+          "f1": 0.7722545767354914,
+          "reference": 0.7673836408557899,
+          "delta": 0.0048709358797014435,
+          "improved": true
+        },
+        "SC457": {
+          "f1": 0.6379649426662329,
+          "reference": 0.5716146792727924,
+          "delta": 0.06635026339344052,
+          "improved": true
+        },
+        "SC459": {
+          "f1": 0.6105175905150598,
+          "reference": 0.6108681501445045,
+          "delta": -0.0003505596294446356,
+          "improved": false
+        }
+      },
+      "f1_sc457": "0.637965",
+      "f1_sc459": "0.610518",
+      "matrix_s": 0.40648890000011306,
+      "fit_s": 68.78119790001074,
+      "predict_s": 0.8385680000064895,
+      "smoke_s": 0.5958864999993239,
+      "cache_s": 1.4707479999924544,
+      "sha256": "3f5bfa834b9bac22c641acbb96a2ca27e9f8b642347fd600afe7845e718ed3b8",
+      "pred_sha": "93d82d0ccaf547e0d3bc0ad36b3e419e8e50a584e4440c4a797027b5d633fdd4",
+      "model_path": "F:\\Projects\\MLweek9\\models\\record_z_c1.joblib",
+      "model_name": "LGBMClassifier(n_estimators=200,learning_rate=0.1,num_leaves=31,class_weight=balanced,deterministic=True,n_jobs=10)",
+      "deterministic": "yes",
+      "est_kaggle_minutes": "0.920",
+      "ram_peak_gb": "0.585"
+    },
+    "c2": {
+      "variant": "c2",
+      "model_id": "record_z_c2",
+      "macro_f1": 0.7760727793229377,
+      "accuracy": 0.9036244965976947,
+      "per_class_f1": [
+        0.9770301215430686,
+        0.4580302732455278,
+        0.8292046936114733,
+        0.7688971499380421,
+        0.8472016582765769
+      ],
+      "n1_precision": 0.3637215110833594,
+      "n1_recall": 0.6183651804670913,
+      "improved": 7,
+      "passed": true,
+      "subjects": {
+        "SC404": {
+          "f1": 0.8072421134707346,
+          "reference": 0.8064217284711441,
+          "delta": 0.0008203849995904733,
+          "improved": true
+        },
+        "SC407": {
+          "f1": 0.8770118715873961,
+          "reference": 0.8698662204038328,
+          "delta": 0.007145651183563362,
+          "improved": true
+        },
+        "SC417": {
+          "f1": 0.7218587788594023,
+          "reference": 0.6784642998663066,
+          "delta": 0.043394478993095675,
+          "improved": true
+        },
+        "SC424": {
+          "f1": 0.7948811537693223,
+          "reference": 0.777328784085071,
+          "delta": 0.017552369684251334,
+          "improved": true
+        },
+        "SC426": {
+          "f1": 0.7958929097872932,
+          "reference": 0.7801167644157571,
+          "delta": 0.015776145371536154,
+          "improved": true
+        },
+        "SC427": {
+          "f1": 0.7836790552310562,
+          "reference": 0.7673836408557899,
+          "delta": 0.01629541437526627,
+          "improved": true
+        },
+        "SC457": {
+          "f1": 0.6050791277273195,
+          "reference": 0.5716146792727924,
+          "delta": 0.03346444845452712,
+          "improved": true
+        },
+        "SC459": {
+          "f1": 0.5965751311652177,
+          "reference": 0.6108681501445045,
+          "delta": -0.014293018979286809,
+          "improved": false
+        }
+      },
+      "f1_sc457": "0.605079",
+      "f1_sc459": "0.596575",
+      "matrix_s": 0.965707499985001,
+      "fit_s": 151.2600223000045,
+      "predict_s": 0.8900931000098353,
+      "smoke_s": 0.5958864999993239,
+      "cache_s": 1.4707479999924544,
+      "sha256": "f99bfb8b77f43eba9df6dbf830d1d421073f13cb1e01667210ae337b251d3a6b",
+      "pred_sha": "3545db7e82e6c21e1fb14b1806b36b46c00174b4bcaa828e35343d37594472ea",
+      "model_path": "F:\\Projects\\MLweek9\\models\\record_z_c2.joblib",
+      "model_name": "LGBMClassifier(n_estimators=200,learning_rate=0.1,num_leaves=31,class_weight=balanced,deterministic=True,n_jobs=10)"
+    }
+  },
+  "confirmation": {
+    "deterministic": "yes",
+    "pred_sha": "93d82d0ccaf547e0d3bc0ad36b3e419e8e50a584e4440c4a797027b5d633fdd4",
+    "pred_sha_repeat": "93d82d0ccaf547e0d3bc0ad36b3e419e8e50a584e4440c4a797027b5d633fdd4",
+    "seeds": {
+      "42": 0.7744287626769817,
+      "7": 0.7718446891881967,
+      "123": 0.7721823855724399,
+      "mean": 0.772818612479206,
+      "min": 0.7718446891881967,
+      "max": 0.7744287626769817,
+      "range": 0.002584073488784977,
+      "stable": true
+    },
+    "seed_fits": {
+      "42_repeat_s": 68.99009009999281,
+      "42_repeat_sha256": "ff0c3ff905ee514c5983fa7edcb2860920182a540d2ac701c6a76cf8a7481831",
+      "7": {
+        "fit_s": 68.87972440000158,
+        "sha256": "3d90232f990982bc5a29d7dede45eddadf0c6093e14713a1cb9abd91435ac750",
+        "macro_f1": 0.7718446891881967
+      },
+      "123": {
+        "fit_s": 69.62584030001017,
+        "sha256": "783096b78e10af04d5913038bf3b073c0519c7bb21f68f67bf108060464cf917",
+        "macro_f1": 0.7721823855724399
+      }
+    },
+    "budget": {
+      "load_s": 0.035882299998775125,
+      "feature_one_s": 2.1186996000033105,
+      "predict_s": 0.9442091999953846,
+      "est_kaggle_minutes": 0.9204375293577524,
+      "ram_peak_gb": 0.58515625,
+      "ram_working_gb": 0.22275390625,
+      "gpu": "lgbm_cpu_only"
+    }
+  }
+}

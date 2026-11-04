@@ -7,3 +7,14 @@ classes: [W, N1, N2, N3, REM]
 channels: ["EEG Fpz-Cz", "EEG Pz-Oz", "EOG horizontal"]
 fs: 100
 epoch_length: 3000
+# Experiment C. Frozen before the run. One record, all of its epochs.
+record_z:
+  formula: "(x - mean_rec) / (population_std_rec + 1e-6)"
+  eps: 1.0e-6
+  ddof: 0
+  scope: one_record_all_epochs
+  neighbor_source: z
+  offsets: [-2, -1, 1, 2]
+  c1_columns: 271
+  c2_columns: 541
+  cache: cache/features_c1
